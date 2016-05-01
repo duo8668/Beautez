@@ -1,0 +1,28 @@
+{
+  "order": "0",
+  "title": "Inventory",
+  "link": "\\Modules\\Inventory\\Http\\Controllers\\InventoryController::class@index",
+  "fontAwesome": "fa-file-text-o",
+  "children": [
+    {
+      "order": "0",
+      "title": "Products",
+      "link": "\\Modules\\Inventory\\Http\\Controllers\\InventoryController::class@getInventoryModule",
+      "fontAwesome": "fa-dot-circle-o",
+      "children": [
+        {
+          "order": "0",
+          "title": "Products",
+          "link": "\\Modules\\Inventory\\Http\\Controllers\\InventoryController::class@getInventoryModule",
+          "fontAwesome": "fa-dot-circle-o"
+        }
+      ]
+    },
+    {
+      "order": "1",
+      "title": "Products",
+      "link": "\\Modules\\Inventory\\Http\\Controllers\\InventoryController::class@getInventoryModule",
+      "fontAwesome": "fa-dot-circle-o"
+    }
+  ]
+}

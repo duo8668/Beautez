@@ -1,0 +1,16 @@
+{
+    "name": "User",
+    "alias": "user",
+    "description": "This is a module to manage everything about user, such as User, Role, Permission",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\User\\Providers\\UserServiceProvider",
+        "Modules\\User\\Providers\\AuthyServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}

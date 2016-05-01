@@ -7,6 +7,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 
 class RouteServiceProvider extends ServiceProvider
 {
+
     /**
      * This namespace is applied to your controller routes.
      *
@@ -14,7 +15,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Http\Controllers';
+    protected $namespace = '';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -54,8 +55,10 @@ class RouteServiceProvider extends ServiceProvider
     {
         $router->group([
             'namespace' => $this->namespace, 'middleware' => 'web',
-        ], function ($router) {
+                ], function ($router)
+        {
             require app_path('Http/routes.php');
         });
     }
+
 }
