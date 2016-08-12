@@ -14,6 +14,7 @@ class SideMenuEventListener
 {
 
     private $module;
+    private $rootNamespace;
 
     /**
      * Create the event listener.
@@ -23,6 +24,7 @@ class SideMenuEventListener
     public function __construct()
     {
         //
+        $this->rootNamespace = \Illuminate\Support\Facades\Request::root();
     }
 
     //put your code here
@@ -31,6 +33,7 @@ class SideMenuEventListener
         $menus = array();
         $controller = \Modules\Inventory\Http\Controllers\InventoryController::class;
         $menu = new \App\SideMenu();
+
         $menu->addSideMenu(0, 'Inventory', action($controller . '@index'), 'fa-file-text-o');
 
         $subMenu = new \App\SideMenu();

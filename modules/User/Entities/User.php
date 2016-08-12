@@ -3,13 +3,14 @@
 namespace Modules\User\Entities;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Modules\User\Traits\SlugableTrait;
 
 class User extends Authenticatable
 {
 
     use SlugableTrait;
 
-    public $incrementing = false;
+    //public $incrementing = false;
     protected $table = 'users';
 
     /**
@@ -18,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstName', 'lastName', 'email', 'password',
+        'firstName', 'lastName', 'userName', 'email', 'password',
     ];
 
     /**
@@ -29,5 +30,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     *
+     * @var type 
+     */
+    protected $guarded = ['id'];
 
 }

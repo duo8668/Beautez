@@ -1,5 +1,9 @@
 @extends('plainapp')
-
+@section('pageTitle')
+Registration
+@endsection
+@section('header')
+@endsection
 @section('content')
 
 <div class="login-box" id="login-box">
